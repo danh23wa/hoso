@@ -1,0 +1,65 @@
+.navbar {
+    width: 80%;
+    margin: 0  auto; 
+    z-index: 1;
+    
+  }
+  body {
+    margin-top: 70px; 
+  }
+  
+
+  
+  .nav-link {
+    position: relative;
+    margin: 0 10px;
+    
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+
+  
+  .nav-link.active::after, .nav-link:hover::after {
+    width: 100%;
+  }
+
+
+
+  .footer {
+    
+      position: fixed; 
+      bottom: 0; 
+      left: 0; 
+      width: 100%; 
+      background-color: #f8f9fa; 
+      border-top: 1px solid #dee2e6; 
+      padding: 50px 0;
+      z-index: 1000; 
+      justify-content: center;
+      
+      
+  }
+  
+  .footer .nav {
+    list-style: none; /* Xóa dấu chấm của danh sách */
+    padding: 0; /* Xóa padding mặc định */
+    margin: 0; /* Xóa margin mặc định */
+  }
+  
+  .footer .nav-item {
+    margin: 0 15px; /* Khoảng cách giữa các mục */
+  }
+  
+  .footer .nav-link {
+    color: #007bff; /* Màu chữ của link */
+    text-decoration: none; /* Xóa gạch chân */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+  }
+  
+
+  
+  .footer .nav-link.active {
+  
+    border-bottom: 2px solid #007bff; /* Đường viền dưới cho link đang hoạt động */
+  }
