@@ -28,8 +28,10 @@ const About = () => {
 I am naturally curious and always eager to learn new technologies, striving to enhance my skills every day. My passion lies in full-stack development, where I enjoy crafting efficient and scalable solutions. Whether working independently or as part of a team, I am committed to delivering high-quality results and embracing new challenges with confidence.
 
 With a strong foundation in software development and a growth mindset, I am excited about the opportunities ahead and the potential to contribute meaningfully to innovative projects. </p>
-        <a href="#Contact" className="btn btn-primary">Download Resume</a>
-      </motion.div>
+<a href="https://drive.google.com/uc?export=download&id=1sCOMuvHYf2H6Lf6QfpAJA3sZfvYi6yNK" class="btn btn-primary">
+    Download Resume
+</a>
+</motion.div>
       <motion.div
         ref={ref}
         className="w-50 d-flex justify-content-center align-items-center"
