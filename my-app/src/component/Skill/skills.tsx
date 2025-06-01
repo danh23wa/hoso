@@ -3,16 +3,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faJsSquare, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
-import { faWind, faDatabase } from '@fortawesome/free-solid-svg-icons'; 
+import { faWind, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { useInView } from 'react-intersection-observer';
 
-const skills = [
+interface Skill {
+  name: string;
+  icon: any; // Có thể thay bằng kiểu cụ thể từ @fortawesome nếu cần
+  percentage: number;
+}
+
+const skills: Skill[] = [
   { name: "HTML & CSS", icon: faHtml5, percentage: 75 },
   { name: "JavaScript", icon: faJsSquare, percentage: 75 },
   { name: "React.js", icon: faReact, percentage: 70 },
   { name: "Node.js", icon: faNodeJs, percentage: 70 },
-  { name: "Tailwind CSS", icon: faWind, percentage: 75 }, 
-  { name: "SQL Server", icon: faDatabase, percentage: 70 }, 
+  { name: "Tailwind CSS", icon: faWind, percentage: 75 },
+  { name: "SQL Server", icon: faDatabase, percentage: 70 },
 ];
 
 const Skills = () => {
@@ -49,7 +55,7 @@ const Skills = () => {
                     aria-valuemin={0}
                     aria-valuemax={100}
                   >
-                    {skill.percentage}%
+                    <span>{skill.percentage}%</span>
                   </div>
                 </div>
               </div>
