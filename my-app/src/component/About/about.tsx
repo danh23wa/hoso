@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import "bootstrap/dist/css/bootstrap.min.css";
 import profilePic from "../../../public/IMG_0558.jpg"; // Đường dẫn đến hình ảnh

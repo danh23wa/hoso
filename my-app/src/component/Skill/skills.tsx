@@ -46,8 +46,8 @@ const Skills = () => {
                     role="progressbar"
                     style={{ width: `${skill.percentage}%` }}
                     aria-valuenow={skill.percentage}
-                    aria-valuemin="0"
-                    aria-valuemax="100"
+                    aria-valuemin={0}
+                    aria-valuemax={100}
                   >
                     {skill.percentage}%
                   </div>

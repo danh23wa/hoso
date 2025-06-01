@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import "bootstrap/dist/css/bootstrap.min.css";
 import profilePic from "../../../public/tsconfig.app.svg"; // Đường dẫn đến hình ảnh
