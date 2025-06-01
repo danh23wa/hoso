@@ -36,12 +36,12 @@ const Skills = () => {
             <motion.div
               key={index}
               ref={ref}
-              className="col-sm-6 col-md-4 mb-4"
+              className="col-6 mb-4" 
               initial={{ opacity: 0 }}
               animate={{ opacity: inView ? 1 : 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="card p-3 shadow-sm">
+              <div className="card p-3 shadow-sm h-100"> 
                 <h5 className="skill-name">
                   <FontAwesomeIcon icon={skill.icon} className="me-2" />
                   {skill.name}
