@@ -1,0 +1,50 @@
+#About {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(10px, 3vw, 20px);
+}
+
+img.rounded-circle {
+  width: clamp(120px, 35vw, 200px);
+  height: clamp(120px, 35vw, 200px);
+  object-fit: cover;
+}
+
+.display-4 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  color: #555;
+}
+
+.btn-primary {
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  padding: clamp(8px, 2vw, 10px) clamp(12px, 3vw, 15px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #About {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .w-50 {
+    width: 100% !important;
+    max-width: 90%;
+  }
+
+  img.rounded-circle {
+    margin-bottom: 20px;
+  }
+
+  .d-flex.flex-column {
+    align-items: center !important;
+  }
+}

@@ -1,9 +1,66 @@
-
-@media (max-width: 991.98px) { /* Kích thước large của Bootstrap là 992px */
-    body {
-        margin-bottom: 100px;
-    }
+#Contact {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(10px, 3vw, 20px);
 }
-.abc{
-    background-color: #0d6efd;
+
+form {
+  width: 100%;
+  max-width: clamp(300px, 80vw, 500px); /* Responsive form width */
+}
+
+.form-control {
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  padding: clamp(8px, 2vw, 10px);
+}
+
+textarea.form-control {
+  min-height: 100px;
+}
+
+.btn-primary {
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  padding: clamp(8px, 2vw, 10px) clamp(12px, 3vw, 15px);
+}
+
+.display-6 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.display-7 {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.skill-name {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #Contact {
+    min-height: 40vh;
+  }
+
+  .d-flex.flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .w-50 {
+    width: 100% !important;
+    max-width: 90%;
+  }
+
+  form {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body {
+    margin-bottom: calc(80px + 5vw);
+  }
 }

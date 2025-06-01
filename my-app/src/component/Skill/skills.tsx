@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 
 interface Skill {
   name: string;
-  icon: any; // Có thể thay bằng kiểu cụ thể từ @fortawesome nếu cần
+  icon: any;
   percentage: number;
 }
 
@@ -23,7 +23,7 @@ const skills: Skill[] = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="container mt-5 m-3">
+    <section id="skills" className="container mt-4 py-3">
       <h2 className="text-center mb-4">Skills</h2>
       <div className="row">
         {skills.map((skill, index) => {
@@ -36,10 +36,10 @@ const Skills = () => {
             <motion.div
               key={index}
               ref={ref}
-              className="col-md-12 mb-4"
+              className="col-sm-6 col-md-4 mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: inView ? 1 : 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="card p-3 shadow-sm">
                 <h5 className="skill-name">

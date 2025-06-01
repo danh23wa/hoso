@@ -1,65 +1,89 @@
 .navbar {
-    width: 80%;
-    margin: 0  auto; 
-    z-index: 1;
-    
-  }
+  width: 100%;
+  max-width: 1200px; /* Cap width for large screens */
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+body {
+  margin-top: calc(60px + 2vw); /* Dynamic margin for navbar */
+}
+
+.nav-link {
+  position: relative;
+  margin: 0 clamp(5px, 1.5vw, 10px); /* Responsive margins */
+  transition: all 0.3s ease-in-out;
+  font-size: clamp(14px, 2.5vw, 16px); /* Responsive font size */
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: clamp(15px, 4vw, 30px) 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .nav-item {
+  margin: 0 clamp(8px, 2vw, 12px);
+}
+
+.footer .nav-link {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: clamp(12px, 2.2vw, 14px);
+}
+
+.footer .nav-link.active {
+  border-bottom: 2px solid #007bff;
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
   body {
-    margin-top: 70px; 
+    margin-bottom: calc(80px + 5vw); /* Space for fixed footer */
   }
-  
-
-  
-  .nav-link {
-    position: relative;
-    margin: 0 10px;
-    
-    transition: all 0.3s ease-in-out;
-    
-  }
-  
-
-  
-  .nav-link.active::after, .nav-link:hover::after {
-    width: 100%;
-  }
-
-
 
   .footer {
-    
-      position: fixed; 
-      bottom: 0; 
-      left: 0; 
-      width: 100%; 
-      background-color: #f8f9fa; 
-      border-top: 1px solid #dee2e6; 
-      padding: 50px 0;
-      z-index: 1000; 
-      justify-content: center;
-      
-      
+    padding: 10px 0;
   }
-  
-  .footer .nav {
-    list-style: none; /* Xóa dấu chấm của danh sách */
-    padding: 0; /* Xóa padding mặc định */
-    margin: 0; /* Xóa margin mặc định */
-  }
-  
-  .footer .nav-item {
-    margin: 0 15px; /* Khoảng cách giữa các mục */
-  }
-  
-  .footer .nav-link {
-    color: #007bff; /* Màu chữ của link */
-    text-decoration: none; /* Xóa gạch chân */
-    transition: color 0.3s; /* Hiệu ứng chuyển màu */
-  }
-  
 
-  
-  .footer .nav-link.active {
-  
-    border-bottom: 2px solid #007bff; /* Đường viền dưới cho link đang hoạt động */
+  .footer .nav-item {
+    margin: 5px 8px;
   }
+
+  .nav-link {
+    font-size: clamp(12px, 2vw, 14px);
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    display: none; /* Ensure footer is hidden on large screens */
+  }
+}
